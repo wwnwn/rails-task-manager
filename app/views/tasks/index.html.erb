@@ -1,0 +1,8 @@
+<div class= "pl-2 bg-dark">
+<% @tasks.each do |task| %>                   
+  <h2><%= link_to task.title, task_path(task) %></h2>
+ <input type="checkbox" aria-label="Checkbox for following text input">  
+  <p><%= task.completed %></p>
+<% end %>
+</div>
+<p><%= link_to 'Add new task', new_path %></p>
